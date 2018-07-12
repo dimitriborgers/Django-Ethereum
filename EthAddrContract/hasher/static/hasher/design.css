@@ -1,0 +1,48 @@
+/* ------------------------------------------------ */
+/*                    header.html                   */
+/* ------------------------------------------------ */
+.title {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align:center
+}
+
+#titleText {
+    font-size: 50px;
+}
+
+.instructions {
+    padding-top: 60px;
+    font-size: 20px;
+    text-align:center;
+    color: #696969;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
+    color: #696969;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.info {
+    padding-top: 20px;
+}
+
+.subjects {
+    font-weight:bold;
+}
+
+.result {
+    display: inline-block;
+}

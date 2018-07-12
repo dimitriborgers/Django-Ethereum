@@ -1,0 +1,33 @@
+{% extends "hasher/header.html" %}
+
+{% block content %}
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!--                      Search Bar                     -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <div class="row instructions">
+        <div class="col-lg-6 searchBar col-centered">
+            <form method='post'>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row info">
+        <div class="col-lg-6 col-centered">
+            <div class="subjects">Node: </div><div class="result">{{ host }}</div>
+            <div class="subjects">Contract Address: </div><div class="result">{{ addr }}</div>
+            <div class="subjects">Transaction hash: </div><div class="result">{{ result_hash }}</div>
+            <div class="subjects">Block Hash: </div><div class="result">{{ block_hash }}</div>
+            <div class="subjects">Block Transactions: </div>
+            <div class="result">
+                {% for i in block_transactions %}
+                    {{i}}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!--This must be within the block content-->
+    {% include 'hasher/includes/htmlsnippet.html' %}
+{% endblock %}

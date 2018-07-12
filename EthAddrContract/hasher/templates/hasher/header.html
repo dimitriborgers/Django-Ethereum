@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+
+    <!-- This allows you to use Bootstrap-->
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'hasher/css/bootstrap.min.css' %}" type = "text/css"/>
+    <link rel="stylesheet" href="{% static 'hasher/design.css' %}" type = "text/css"/>
+</head>
+
+<body>
+    <!-- class for Bootstrap grids -->
+    <div class="container-fluid">
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!--                  Title & Sub-header                 -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <div class="row title">
+            <div class="col-lg-12">
+                <div id="titleText">
+                    Ethereum Contract
+                </div>
+                <div>
+                    Find Ethereum Contract Information
+                </div>
+            </div>
+        </div>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!--                   Instr. and Input                  -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!--the "content" in "block content" is the reference
+            you can use other words than just "content"-->
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>
